@@ -16,6 +16,8 @@
 		2A585F982BAA2E51009BD3F0 /* UIButton_TextField_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A585F972BAA2E51009BD3F0 /* UIButton_TextField_TaskTests.swift */; };
 		2A585FA22BAA2E51009BD3F0 /* UIButton_TextField_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A585FA12BAA2E51009BD3F0 /* UIButton_TextField_TaskUITests.swift */; };
 		2A585FA42BAA2E51009BD3F0 /* UIButton_TextField_TaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A585FA32BAA2E51009BD3F0 /* UIButton_TextField_TaskUITestsLaunchTests.swift */; };
+		2A585FB42BAA2EAD009BD3F0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A585FB32BAA2EAD009BD3F0 /* SnapKit */; };
+		2A585FB62BAA2EAD009BD3F0 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2A585FB52BAA2EAD009BD3F0 /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A585FB42BAA2EAD009BD3F0 /* SnapKit in Frameworks */,
+				2A585FB62BAA2EAD009BD3F0 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +103,8 @@
 		2A585F7F2BAA2E4F009BD3F0 /* UIButton-TextField-Task */ = {
 			isa = PBXGroup;
 			children = (
-				2A585F802BAA2E4F009BD3F0 /* AppDelegate.swift */,
-				2A585F822BAA2E4F009BD3F0 /* SceneDelegate.swift */,
-				2A585F842BAA2E4F009BD3F0 /* ViewController.swift */,
+				2A585FB02BAA2E5E009BD3F0 /* Supporting */,
+				2A585FB12BAA2E6B009BD3F0 /* VCs */,
 				2A585F862BAA2E4F009BD3F0 /* Main.storyboard */,
 				2A585F892BAA2E51009BD3F0 /* Assets.xcassets */,
 				2A585F8B2BAA2E51009BD3F0 /* LaunchScreen.storyboard */,
@@ -127,6 +130,23 @@
 			path = "UIButton-TextField-TaskUITests";
 			sourceTree = "<group>";
 		};
+		2A585FB02BAA2E5E009BD3F0 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				2A585F802BAA2E4F009BD3F0 /* AppDelegate.swift */,
+				2A585F822BAA2E4F009BD3F0 /* SceneDelegate.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		2A585FB12BAA2E6B009BD3F0 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				2A585F842BAA2E4F009BD3F0 /* ViewController.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +163,10 @@
 			dependencies = (
 			);
 			name = "UIButton-TextField-Task";
+			packageProductDependencies = (
+				2A585FB32BAA2EAD009BD3F0 /* SnapKit */,
+				2A585FB52BAA2EAD009BD3F0 /* SnapKit-Dynamic */,
+			);
 			productName = "UIButton-TextField-Task";
 			productReference = 2A585F7D2BAA2E4F009BD3F0 /* UIButton-TextField-Task.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +239,9 @@
 				Base,
 			);
 			mainGroup = 2A585F742BAA2E4F009BD3F0;
+			packageReferences = (
+				2A585FB22BAA2EAD009BD3F0 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 2A585F7E2BAA2E4F009BD3F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -601,6 +628,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2A585FB22BAA2EAD009BD3F0 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2A585FB32BAA2EAD009BD3F0 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A585FB22BAA2EAD009BD3F0 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		2A585FB52BAA2EAD009BD3F0 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A585FB22BAA2EAD009BD3F0 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2A585F752BAA2E4F009BD3F0 /* Project object */;
 }
